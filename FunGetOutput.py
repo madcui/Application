@@ -17,10 +17,9 @@ def GetOutput(weight,inputData,neuronValue=[]):
         neuronValue.append(mat(neuronValue[-1])*weight[i])
     return neuronValue
 
-"""test
+
 from FunInit import Init
 layerNum=[2,3,4]
 inputData=[1,2]
 weight=Init(layerNum)
 O=GetOutput(weight,inputData)
-"""
