@@ -6,6 +6,7 @@ Created on Sat Mar 18 13:03:28 2017
 @author: guangwei
 """
 import numpy as np
+from FunNeuronNLFun import NeuronNLFun 
 
 def GenerateData(nTrain, nTest, nIn, nOut):
     # Generate a nIn-by-nOut matrix, 
@@ -25,10 +26,8 @@ def GenerateData(nTrain, nTest, nIn, nOut):
     
     return weightTarget, trainMIn, trainMOut, testMIn, testMOut
 
-def NeuronNLFun(x):
-    return 1/(1+np.exp(-x))
 
-"""
+
 # test:
 nTrain = 12
 nTest= 8
@@ -37,4 +36,5 @@ nOut = 4
 
 (weightTarget,trainMIn,trainMOut,testMIn,testMOut)= GenerateData(nTrain, nTest, nIn, nOut)
 print(weightTarget)
-"""
+
+
