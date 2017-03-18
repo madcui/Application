@@ -10,7 +10,8 @@ import numpy as np
 from FunNeuronNLFun import NeuronNLFun
 
 # all inputs are list type variable
-def GetOutput(weight,inputData,neuronValue=[]):
+def GetOutput(weight,inputData):
+    neuronValue=[]
     inputData=NeuronNLFun(mat(inputData))
     neuronValue.append(inputData)
     for i in range(0,len(weight)):
@@ -18,9 +19,10 @@ def GetOutput(weight,inputData,neuronValue=[]):
         neuronValue.append(NeuronNLFun(mat(neuronValue[-1])*weight[i]))
     return neuronValue
 
-
+"""
 from FunInit import Init
 layerNum=[2,3,4]
 inputData=[1,2]
 weight=Init(layerNum)
 O=GetOutput(weight,inputData)
+"""
