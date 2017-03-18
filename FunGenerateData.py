@@ -28,6 +28,8 @@ def GenerateData(nTrain, nTest, nIn, nOut):
 def NeuronNLFun(x):
     return 1/(1+np.exp(-x))
 
+"""
+# test:
 nTrain = 12
 nTest= 8
 nIn = 10
@@ -35,3 +37,4 @@ nOut = 4
 
 (weightTarget,trainMIn,trainMOut,testMIn,testMOut)= GenerateData(nTrain, nTest, nIn, nOut)
 print(weightTarget)
+"""
