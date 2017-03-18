@@ -8,3 +8,4 @@ Created on Sat Mar 18 15:53:26 2017
 
 def Train(wInit, trainMIn, trainMOut, param):
     return wTrain outputInfo
+    abc
