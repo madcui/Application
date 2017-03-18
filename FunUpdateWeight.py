@@ -15,7 +15,7 @@ def UpdateWeight (weightOld, neuronValue, error, weightNew=[]):
         ePost = mat(error[i+1])
         dW = oPre.transpose() * ePost
         weightNew.append(mat(weightOld[i]) + dW)
-    return weightNew, dW, oPre, ePost
+    return weightNew
 
 """
 #test
@@ -36,4 +36,4 @@ print(weightNew)
 print(dW)
 print(oPre)
 print(ePost)
-""
+"""
