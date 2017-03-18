@@ -22,4 +22,10 @@ def GenerateData(nTrain, nTest, nIn, nOut):
     
     return wTarget, trainMIn, trainMOut, testMIn, testMOut
 
-GenerateData(12, 8, 10, 4)
+nTrain = 12
+nTest= 8
+nIn = 10
+nOut = 4
+
+(wTarget,trainMIn,trainMOut,testMIn,testMOut)= GenerateData(nTrain, nTest, nIn, nOut)
+print(wTarget)
