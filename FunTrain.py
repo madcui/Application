@@ -6,10 +6,6 @@ Created on Sat Mar 18 15:53:26 2017
 @author: guangwei
 """
 
-def Train(wInit, trainMIn, trainMOut, param):
-<<<<<<< HEAD
-    return wTrain outputInfo xyz
-=======
-    return wTrain outputInfo
-    abc
->>>>>>> origin/master
+def Train(weightInit, trainMIn, trainMOut, param):
+    
+    return weightTrain outputInfo 
