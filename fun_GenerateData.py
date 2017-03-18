@@ -10,22 +10,22 @@ import numpy as np
 def GenerateData(nTrain, nTest, nIn, nOut):
     # Generate a nIn-by-nOut matrix, 
     # the value follow random uniform distribution between [-1 1]
-    wTarget = np.random.uniform(-1 ,1, (nIn ,nOut))
+    weightTarget = np.random.uniform(-1 ,1, (nIn ,nOut))
     
     # Generate random inputs for train and test
     trainMIn  = np.random.rand(nTrain, nIn)
     testMIn = np.random.rand(nTest, nIn)
     
     # Calculate the outputs using input by the weight Matrix
-    trainMOut = np.dot(trainMIn,  wTarget)
-    testMOut = np.dot(testMIn,  wTarget)
+    trainMOut = np.dot(trainMIn,  weightTarget)
+    testMOut = np.dot(testMIn,  weightTarget)
     
-    return wTarget, trainMIn, trainMOut, testMIn, testMOut
+    return weightTarget, trainMIn, trainMOut, testMIn, testMOut
 
 nTrain = 12
 nTest= 8
 nIn = 10
 nOut = 4
 
-(wTarget,trainMIn,trainMOut,testMIn,testMOut)= GenerateData(nTrain, nTest, nIn, nOut)
-print(wTarget)
+(weightTarget,trainMIn,trainMOut,testMIn,testMOut)= GenerateData(nTrain, nTest, nIn, nOut)
+print(weightTarget)
