@@ -26,8 +26,7 @@ def GenerateData(nTrain, nTest, nIn, nOut):
     
     return weightTarget, trainMIn, trainMOut, testMIn, testMOut
 
-
-
+"""
 # test:
 nTrain = 12
 nTest= 8
@@ -36,5 +35,4 @@ nOut = 4
 
 (weightTarget,trainMIn,trainMOut,testMIn,testMOut)= GenerateData(nTrain, nTest, nIn, nOut)
 print(weightTarget)
-
-
+"""
