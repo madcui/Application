@@ -20,7 +20,13 @@ def GenerateData(nTrain, nTest, nIn, nOut):
     trainMOut = np.dot(trainMIn,  weightTarget)
     testMOut = np.dot(testMIn,  weightTarget)
     
+    trainMOut = NeuronNLFun(trainMOut)
+    testMOut  = NeuronNLFun(testMOut)
+    
     return weightTarget, trainMIn, trainMOut, testMIn, testMOut
+
+def NeuronNLFun(x):
+    return 1/(1+np.exp(-x))
 
 nTrain = 12
 nTest= 8
