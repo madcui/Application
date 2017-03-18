@@ -25,7 +25,7 @@ def GetError(weight,target,outputValue):
         error.append(multiply(errorPart1[i],errorPart2[i]))
     return error
 
-
+"""
 from FunInit import Init
 from FunGetOutput import GetOutput
 layerNum=[2,3,4]
@@ -34,3 +34,4 @@ target=[1,2,3,4]
 weight=Init(layerNum)
 outputValue=GetOutput(weight,inputData)
 error=GetError(weight,target,outputValue)
+"""
