@@ -7,6 +7,7 @@ from FunTrain import Train
 
 # generate data 
 (weightTarget, trainMIn, trainMOut, testMIn, testMOut) = GenerateData(Param.trainSize, Param.testSize, Param.numNode[0], Param.numNode[-1])
+temp = trainMIn[1,:]
 
 # initialize the weight matrix
 weightInit = Init(Param.numNode)

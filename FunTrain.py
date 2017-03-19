@@ -15,10 +15,12 @@ def Train(weightInit, trainMIn, trainMOut, Param):
     weightOld = weightInit
     for l in range(0, Param.loop):
         for i in range(0, Param.trainSize):
-            neuronValue = GetOutput(weightOld, trainMIn[i])
-            error = GetError(weightOld, trainMOut[i], neuronValue)
-            weightNew = UpdateWeight (weightOld, neuronValue, error)
+            print(i)
+            nValue = GetOutput(weightOld, trainMIn[i, :])
+            error = GetError(weightOld, trainMOut[i, :], nValue)
+            weightNew = UpdateWeight (weightOld, nValue, error)
             weightOld = weightNew
+            print(weightNew)
             
         tolCurrent = sum(error[-1])
         if tolCurrent < Param.tolerance:
