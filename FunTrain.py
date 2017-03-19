@@ -20,9 +20,12 @@ def Train(weightInit, trainMIn, trainMOut, Param):
             error = GetError(weightOld, trainMOut[i, :], nValue)
             weightNew = UpdateWeight (weightOld, nValue, error)
             weightOld = weightNew
+<<<<<<< Updated upstream
             print(weightNew)
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> Stashed changes
             
 >>>>>>> origin/master
         tolCurrent = sum(error[-1])
