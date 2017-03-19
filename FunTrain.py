@@ -19,7 +19,7 @@ def Train(weightInit, trainMIn, trainMOut, Param):
             error = GetError(weightOld, trainMOut[i], neuronValue)
             weightNew = UpdateWeight (weightOld, neuronValue, error)
             weightOld = weightNew
-            
+            print(weightNew)
         tolCurrent = sum(error[-1])
         if tolCurrent < Param.tolerance:
             return weightNew

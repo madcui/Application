@@ -21,8 +21,8 @@ def GetOutput(weight,inputData):
 
 """
 from FunInit import Init
-layerNum=[2,3,4]
-inputData=[1,2]
+layerNum=[12,5,4]
+inputData=[1,2,3,4,5,6,7,8,9,10,11,12]
 weight=Init(layerNum)
 O=GetOutput(weight,inputData)
 """
