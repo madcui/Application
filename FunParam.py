@@ -13,6 +13,7 @@ class Param:
     loop = 20      #number of times to train the data set
     tolerance = 10**-6      #tolerance to terminate the training
     plotFlag = 1    # flag of visualizing the training process. 1 yes, 0 no.
+    plotInterval = 200 # interval for visualize the training results
     
     # parameters for the datasets
     trainSize = 1000     #sample size of the training dataset

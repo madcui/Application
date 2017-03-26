@@ -12,8 +12,9 @@ from FunGetOutput import GetOutput
 from FunGetError import GetError
 from FunUpdateWeight import UpdateWeight
 
-def Train(weightInit, trainMIn, trainMOut, Param):
+def Train(weightInit, trainMIn, trainMOut, teParam):
     
+    weightHistory=[]
     weightOld = weightInit
     for l in range(0, Param.loop):
         for i in range(0, Param.trainSize):
@@ -21,11 +22,10 @@ def Train(weightInit, trainMIn, trainMOut, Param):
             error = GetError(weightOld, trainMOut[i, :], nValue)
             weightNew = UpdateWeight (weightOld, nValue, error)
             weightOld = weightNew
-
-            #print(weightNew)
+            weightHistory.append(weightNew)
 
         tolCurrent = np.sum(error[-1])
         if tolCurrent < Param.tolerance:
-            return weightNew
+            return weightNew, weightHistory
     
-    return weightNew 
+    return weightNew, weightHistory

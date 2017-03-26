@@ -20,7 +20,7 @@ def  VisualizeNet(wCurrent, currentError, wTarget):
     ax2.imshow(wTarget[-1], extent=[1,4,1,10])
     ax2.set_title('Target')
 
-    ax3.bar([1,2,3,4], currentError, )
+    ax3.bar([1,2,3,4], currentError )
     ax3.set_title('Error')
     
     return
