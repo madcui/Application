@@ -15,16 +15,11 @@ def Train(weightInit, trainMIn, trainMOut, Param):
     weightOld = weightInit
     for l in range(0, Param.loop):
         for i in range(0, Param.trainSize):
-            print(i)
             nValue = GetOutput(weightOld, trainMIn[i, :])
             error = GetError(weightOld, trainMOut[i, :], nValue)
             weightNew = UpdateWeight (weightOld, nValue, error)
             weightOld = weightNew
-            print(weightNew)
-<<<<<<< HEAD
-=======
-            
->>>>>>> origin/master
+
         tolCurrent = sum(error[-1])
         if tolCurrent < Param.tolerance:
             return weightNew

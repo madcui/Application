@@ -19,7 +19,7 @@ class Param:
     testSize =  2      #sample size fo the testing dataset
     
     # structure of the network
-    numNode = [3, 5]
+    numNode = [10,4]
 
 
 """
