@@ -5,6 +5,8 @@ Created on Sat Mar 18 15:53:26 2017
 
 @author: guangwei
 """
+import numpy as np
+
 from FunParam import Param
 from FunGetOutput import GetOutput
 from FunGetError import GetError
@@ -15,20 +17,14 @@ def Train(weightInit, trainMIn, trainMOut, Param):
     weightOld = weightInit
     for l in range(0, Param.loop):
         for i in range(0, Param.trainSize):
-            print(i)
             nValue = GetOutput(weightOld, trainMIn[i, :])
             error = GetError(weightOld, trainMOut[i, :], nValue)
             weightNew = UpdateWeight (weightOld, nValue, error)
             weightOld = weightNew
-<<<<<<< Updated upstream
-            print(weightNew)
-<<<<<<< HEAD
-=======
-=======
->>>>>>> Stashed changes
-            
->>>>>>> origin/master
-        tolCurrent = sum(error[-1])
+
+            #print(weightNew)
+
+        tolCurrent = np.sum(error[-1])
         if tolCurrent < Param.tolerance:
             return weightNew
     
