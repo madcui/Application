@@ -4,6 +4,7 @@ from FunParam import Param
 from FunGenerateData import GenerateData
 from FunInit import Init
 from FunTrain import Train
+from FunTest import Test
 
 # generate data 
 (weightTarget, trainMIn, trainMOut, testMIn, testMOut) = GenerateData(Param.trainSize, Param.testSize, Param.numNode[0], Param.numNode[-1])
@@ -18,4 +19,5 @@ weightTrain = Train(weightInit, trainMIn, trainMOut, Param)
 #print(weightTrain)
 
 wError = (weightTrain[0]- weightTarget[0])/weightTarget[0]
+error=Test(weightTrain,testMIn,testMOut)
 print(np.amax(wError))
