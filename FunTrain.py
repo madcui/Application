@@ -22,13 +22,9 @@ def Train(weightInit, trainMIn, trainMOut, Param):
             weightNew = UpdateWeight (weightOld, nValue, error)
             weightOld = weightNew
 
-<<<<<<< HEAD
-        tolCurrent = sum(error[-1])
-=======
             #print(weightNew)
 
         tolCurrent = np.sum(error[-1])
->>>>>>> origin/master
         if tolCurrent < Param.tolerance:
             return weightNew
     
