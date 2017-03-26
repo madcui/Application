@@ -10,13 +10,13 @@ import numpy as np
 
 class Param: 
     # parameters for the training process
-    loop = 80      #number of times to train the data set
+    loop = 20      #number of times to train the data set
     tolerance = 10**-6      #tolerance to terminate the training
     plotFlag = 1    # flag of visualizing the training process. 1 yes, 0 no.
     
     # parameters for the datasets
-    trainSize = 100     #sample size of the training dataset
-    testSize =  10      #sample size fo the testing dataset
+    trainSize = 1000     #sample size of the training dataset
+    testSize =  20      #sample size fo the testing dataset
     
     # structure of the network
     numNode = [10,4]
