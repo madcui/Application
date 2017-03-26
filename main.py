@@ -15,4 +15,7 @@ weightInit = Init(Param.numNode)
 # train
 weightTrain = Train(weightInit, trainMIn, trainMOut, Param)
 
-print(weightTrain)
+#print(weightTrain)
+
+wError = (weightTrain[0]- weightTarget[0])/weightTarget[0]
+print(np.amax(wError))

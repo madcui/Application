@@ -9,7 +9,8 @@ Created on Sat Mar 18 16:31:55 2017
 from numpy import *
 import numpy as np
 
-def UpdateWeight (weightOld, neuronValue, error, weightNew=[]):
+def UpdateWeight (weightOld, neuronValue, error):
+    weightNew=[]
     for i in range(0,len(neuronValue)-1):
         oPre = mat(neuronValue[i])
         ePost = mat(error[i+1])

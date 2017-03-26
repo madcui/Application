@@ -5,6 +5,8 @@ Created on Sat Mar 18 15:53:26 2017
 
 @author: guangwei
 """
+import numpy as np
+
 from FunParam import Param
 from FunGetOutput import GetOutput
 from FunGetError import GetError
@@ -20,7 +22,13 @@ def Train(weightInit, trainMIn, trainMOut, Param):
             weightNew = UpdateWeight (weightOld, nValue, error)
             weightOld = weightNew
 
+<<<<<<< HEAD
         tolCurrent = sum(error[-1])
+=======
+            #print(weightNew)
+
+        tolCurrent = np.sum(error[-1])
+>>>>>>> origin/master
         if tolCurrent < Param.tolerance:
             return weightNew
     
