@@ -10,7 +10,7 @@ import numpy as np
 
 class Param: 
     # parameters for the training process
-    loop = 100      #number of times to train the data set
+    loop = 80      #number of times to train the data set
     tolerance = 10**-6      #tolerance to terminate the training
     plotFlag = 1    # flag of visualizing the training process. 1 yes, 0 no.
     
