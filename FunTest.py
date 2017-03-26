@@ -17,8 +17,8 @@ def Test(weightTrain,testMIn,testMOut):
         nodeDiscrepancies=discrepancies+nodeDiscrepancies
         dist.append(np.linalg.norm(discrepancies))
         samplenorm.append(np.linalg.norm(neuronvaule[-1]))
-    totalDicrepancies=np.mean(mat(dist)/mat(samplenorm))
-    nodeDiscrepancies=nodeDiscrepancies/testMIn.shape[0]
+    totalDicrepancies=abs(np.mean(mat(dist)/mat(samplenorm)))
+    nodeDiscrepancies=abs(nodeDiscrepancies/testMIn.shape[0])
         
     return totalDicrepancies,nodeDiscrepancies
     
