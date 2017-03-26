@@ -10,11 +10,14 @@ from numpy import *
 def Test(weightTrain,testMIn,testMOut):
     dist=[]
     M=[]
+    nodeDiscrepancies=[]
     for i in range(testMIn.shape[0]):
         neuronvaule=GetOutput(weightTrain,testMIn[i,:])
         discrepancies=neuronvaule[-1]-testMOut[i,:]
+        nodeDiscrepancies.append(discrepancies)
         dist.append(np.linalg.norm(discrepancies))
         M.append(np.linalg.norm(neuronvaule[-1]))
-    D=np.mean(mat(dist)/mat(M))
-    return D
+    totalDicrepancies=np.mean(mat(dist)/mat(M))
+        
+    return totalDicrepancies,nodeDiscrepancies
     

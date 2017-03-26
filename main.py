@@ -19,5 +19,5 @@ weightTrain = Train(weightInit, trainMIn, trainMOut, Param)
 #print(weightTrain)
 
 wError = (weightTrain[0]- weightTarget[0])/weightTarget[0]
-error=Test(weightTrain,testMIn,testMOut)
+(error,nodeError)=Test(weightTrain,testMIn,testMOut)
 print(np.amax(wError))
