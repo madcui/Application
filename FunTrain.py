@@ -24,7 +24,7 @@ def Train(weightInit, trainMIn, trainMOut, teParam):
             weightOld = weightNew
             weightHistory.append(weightNew)
 
-        tolCurrent = np.sum(error[-1])
+        tolCurrent = np.max(error[-1])
         if tolCurrent < Param.tolerance:
             return weightNew, weightHistory
     

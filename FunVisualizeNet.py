@@ -7,20 +7,22 @@ Created on Sun Mar 26 14:54:38 2017
 """
 import numpy as np
 import matplotlib.pyplot as plt
+from FunParam import Param
 
 #%matplotlib qt
 
-def  VisualizeNet(wCurrent, currentError, wTarget):
+def  VisualizeNet(wCurrent, currentError, wTarget, Param):
     
     fig, (ax1, ax2, ax3) = plt.subplots(1,3)
     
-    ax1.imshow(wCurrent[-1], extent=[1,4,1,10])
+    ax1.imshow(wCurrent[-1], extent=[1, Param.numNode[1], 1, Param.numNode[0]])
     ax1.set_title('Current')
 
-    ax2.imshow(wTarget[-1], extent=[1,4,1,10])
+    ax2.imshow(wTarget[-1], extent=[1, Param.numNode[1], 1, Param.numNode[0]])
     ax2.set_title('Target')
 
-    ax3.bar([1,2,3,4], currentError )
+    #ax3.bar([1,2,3,4], currentError )
+    ax3.bar(list(range(1, Param.numNode[1]+1)), currentError )
     ax3.set_title('Error')
     
     return

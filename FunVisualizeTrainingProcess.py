@@ -15,6 +15,6 @@ def VisualizeTrainingProcess (wHistroy, testMIn, testMOut, wTarget, Param):
     while (l<total-1):
         w = wHistroy[l]
         (error,nodeError)=Test(w,testMIn,testMOut)
-        VisualizeNet(w, nodeError.transpose(), wTarget)
+        VisualizeNet(w, nodeError.transpose(), wTarget, Param)
         l = l+Param.plotInterval
     return
