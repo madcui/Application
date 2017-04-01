@@ -13,17 +13,25 @@ from FunParam import Param
 
 def  VisualizeNet(wCurrent, currentError, wTarget, Param):
     
-    fig, (ax1, ax2, ax3) = plt.subplots(1,3)
+    if len(Param.numNode) == 2:
+        fig, (ax1, ax2, ax3) = plt.subplots(1,3)
+        
+        ax1.imshow(wCurrent[-1], extent=[1, Param.numNode[1], 1, Param.numNode[0]])
+        ax1.set_title('Current')
     
-    ax1.imshow(wCurrent[-1], extent=[1, Param.numNode[1], 1, Param.numNode[0]])
-    ax1.set_title('Current')
+        ax2.imshow(wTarget[-1], extent=[1, Param.numNode[1], 1, Param.numNode[0]])
+        ax2.set_title('Target')
+    
+        #ax3.bar([1,2,3,4], currentError )
+        ax3.bar(list(range(1, Param.numNode[1]+1)), currentError )
+        ax3.set_title('Error')
+    elif len(Param.numNode) > 2:
+        f, axarr = plt.subplots(1, len(Param.numNode))               
 
-    ax2.imshow(wTarget[-1], extent=[1, Param.numNode[1], 1, Param.numNode[0]])
-    ax2.set_title('Target')
+        for i in range(0, len(Param.numNode)-1):
+            axarr[i].imshow(wCurrent[i])
 
-    #ax3.bar([1,2,3,4], currentError )
-    ax3.bar(list(range(1, Param.numNode[1]+1)), currentError )
-    ax3.set_title('Error')
+        axarr[len(Param.numNode)-1].bar(list(range(1, Param.numNode[-1]+1)), currentError )
     
     return
 

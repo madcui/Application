@@ -8,8 +8,10 @@ from FunTest import Test
 from FunVisualizeTrainingProcess import VisualizeTrainingProcess
 
 # generate data 
+"""
 (weightTarget, trainMIn, trainMOut, testMIn, testMOut) = GenerateData(Param.trainSize, Param.testSize, Param.numNode[0], Param.numNode[-1])
 temp = trainMIn[1,:]
+"""
 
 # initialize the weight matrix
 weightInit = Init(Param.numNode)
@@ -19,9 +21,10 @@ weightInit = Init(Param.numNode)
 
 #print(weightTrain)
 
-wError = (weightTrain[0]- weightTarget[0])/weightTarget[0]
-(error,nodeError)=Test(weightTrain,testMIn,testMOut)
-print(np.amax(wError))
+if len(Param.numNode) == 2:
+    wError = (weightTrain[0]- weightTarget[0])/weightTarget[0]
+    (error,nodeError)=Test(weightTrain,testMIn,testMOut)
+    print(np.max(wError))
 
 if Param.plotFlag:
     VisualizeTrainingProcess (weightHistory, testMIn, testMOut, weightTarget, Param)
