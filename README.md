@@ -1,6 +1,5 @@
 # lv-club
-Algorithm implementations
+Algorithm implementations:
 
-Project # 0: train a nerual net to do PCA.
-
-Project # 2: apply Hopfield network on MNIST dataset. 
+Project # 0: linear regression using dense neural net.
+Project # 1: apply Hopfield network on MNIST dataset. 
