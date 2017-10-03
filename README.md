@@ -1,5 +1,4 @@
-# lv-club
-Algorithm implementations:
+# Algorithm implementations:
 
 Project # 0: linear regression using dense neural net.
 
