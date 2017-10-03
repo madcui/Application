@@ -1,4 +1,5 @@
 # lv-club
-Idea testing about neural net, machine learning algorithms.
+Algorithm implementations
 
-Project # 1: train a nerual net to do PCA.
+Project # 0: train a nerual net to do PCA.
+Project # 2: apply Hopfield network on MNIST dataset. 
