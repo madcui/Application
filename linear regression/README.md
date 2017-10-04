@@ -1,7 +1,5 @@
-Method: dense neural network
+# Algorithm implementations:
 
-Dataset: generated matrix via linear transformation
+Project # 0: linear regression using dense neural net.
 
-Aims: 
-1, find out the transfer matrix.
-2, get a taste of the neural network, understand the backprop.
+Project # 1: apply Hopfield network on MNIST dataset. 
