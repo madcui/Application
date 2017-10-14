@@ -26,3 +26,11 @@ plt.show()
 
 # concatenate these two parts
 data_full = np.concatenate((data_img, data_label), axis=0)
+
+# binary img
+data_img_b = data_img
+data_img_b[data_img_b < 0.5] = 0
+data_img_b[data_img_b > 0.5] = 1
+plt.figure(3)
+plt.imshow(np.reshape(data_img_b, [28, 28]), cmap='Greys')
+plt.show()
