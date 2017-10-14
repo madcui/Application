@@ -7,13 +7,15 @@ from hf_net import HopfNet
 # load data
 training_data, validation_data, test_data = load_MNIST_data.load_data_wrapper()
 training_data = list(training_data)
+test_data = list(test_data)
 
 # initiate a net
 h_net = HopfNet(784)
 
 # form memories
-memory_img_count = 100
+memory_img_count = 60
 for i in range(memory_img_count):
+    print(i)
     input_sample = training_data[i]
     input_img = input_sample[0]
 
